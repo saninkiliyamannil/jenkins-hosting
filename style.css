@@ -10,37 +10,64 @@ body {
   align-items: center;
   justify-content: center;
   font-family: Arial, sans-serif;
-  background: #f0f4f8;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  animation: fadeIn 0.8s ease;
 }
 
 .card {
   text-align: center;
-  padding: 2rem 3rem;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 3.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 h1 {
   margin-bottom: 0.5rem;
   color: #1f2937;
+  font-size: 2rem;
 }
 
 p {
   margin-bottom: 1.5rem;
   color: #6b7280;
+  font-size: 1.1rem;
 }
 
 button {
-  padding: 0.5rem 1.5rem;
+  padding: 0.6rem 1.8rem;
   font-size: 1rem;
+  font-weight: 600;
   color: #fff;
-  background: #2563eb;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
   border: none;
-  border-radius: 8px;
+  border-radius: 50px;
   cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 button:hover {
-  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.55);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
